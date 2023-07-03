@@ -69,53 +69,54 @@ include CMakeFiles/my_executable.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/my_executable.dir/flags.make
 
-CMakeFiles/my_executable.dir/src/main.c.o: CMakeFiles/my_executable.dir/flags.make
-CMakeFiles/my_executable.dir/src/main.c.o: ../src/main.c
-CMakeFiles/my_executable.dir/src/main.c.o: CMakeFiles/my_executable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/my_executable.dir/src/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/my_executable.dir/src/main.c.o -MF CMakeFiles/my_executable.dir/src/main.c.o.d -o CMakeFiles/my_executable.dir/src/main.c.o -c /home/quat/Cprogram/Cmakefile/src/main.c
+CMakeFiles/my_executable.dir/src/main.cpp.o: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/my_executable.dir/src/main.cpp.o: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_executable.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/src/main.cpp.o -MF CMakeFiles/my_executable.dir/src/main.cpp.o.d -o CMakeFiles/my_executable.dir/src/main.cpp.o -c /home/quat/Cprogram/Cmakefile/src/main.cpp
 
-CMakeFiles/my_executable.dir/src/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_executable.dir/src/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/quat/Cprogram/Cmakefile/src/main.c > CMakeFiles/my_executable.dir/src/main.c.i
+CMakeFiles/my_executable.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quat/Cprogram/Cmakefile/src/main.cpp > CMakeFiles/my_executable.dir/src/main.cpp.i
 
-CMakeFiles/my_executable.dir/src/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_executable.dir/src/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/main.c -o CMakeFiles/my_executable.dir/src/main.c.s
+CMakeFiles/my_executable.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/main.cpp -o CMakeFiles/my_executable.dir/src/main.cpp.s
 
-CMakeFiles/my_executable.dir/src/typedef.c.o: CMakeFiles/my_executable.dir/flags.make
-CMakeFiles/my_executable.dir/src/typedef.c.o: ../src/typedef.c
-CMakeFiles/my_executable.dir/src/typedef.c.o: CMakeFiles/my_executable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/my_executable.dir/src/typedef.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/my_executable.dir/src/typedef.c.o -MF CMakeFiles/my_executable.dir/src/typedef.c.o.d -o CMakeFiles/my_executable.dir/src/typedef.c.o -c /home/quat/Cprogram/Cmakefile/src/typedef.c
+CMakeFiles/my_executable.dir/src/dataalginment.cpp.o: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/src/dataalginment.cpp.o: ../src/dataalginment.cpp
+CMakeFiles/my_executable.dir/src/dataalginment.cpp.o: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/my_executable.dir/src/dataalginment.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/src/dataalginment.cpp.o -MF CMakeFiles/my_executable.dir/src/dataalginment.cpp.o.d -o CMakeFiles/my_executable.dir/src/dataalginment.cpp.o -c /home/quat/Cprogram/Cmakefile/src/dataalginment.cpp
 
-CMakeFiles/my_executable.dir/src/typedef.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_executable.dir/src/typedef.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/quat/Cprogram/Cmakefile/src/typedef.c > CMakeFiles/my_executable.dir/src/typedef.c.i
+CMakeFiles/my_executable.dir/src/dataalginment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/src/dataalginment.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quat/Cprogram/Cmakefile/src/dataalginment.cpp > CMakeFiles/my_executable.dir/src/dataalginment.cpp.i
 
-CMakeFiles/my_executable.dir/src/typedef.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_executable.dir/src/typedef.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/typedef.c -o CMakeFiles/my_executable.dir/src/typedef.c.s
+CMakeFiles/my_executable.dir/src/dataalginment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/dataalginment.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/dataalginment.cpp -o CMakeFiles/my_executable.dir/src/dataalginment.cpp.s
 
 # Object files for target my_executable
 my_executable_OBJECTS = \
-"CMakeFiles/my_executable.dir/src/main.c.o" \
-"CMakeFiles/my_executable.dir/src/typedef.c.o"
+"CMakeFiles/my_executable.dir/src/main.cpp.o" \
+"CMakeFiles/my_executable.dir/src/dataalginment.cpp.o"
 
 # External object files for target my_executable
 my_executable_EXTERNAL_OBJECTS =
 
-../bin/my_executable: CMakeFiles/my_executable.dir/src/main.c.o
-../bin/my_executable: CMakeFiles/my_executable.dir/src/typedef.c.o
-../bin/my_executable: CMakeFiles/my_executable.dir/build.make
-../bin/my_executable: CMakeFiles/my_executable.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ../bin/my_executable"
+my_executable: CMakeFiles/my_executable.dir/src/main.cpp.o
+my_executable: CMakeFiles/my_executable.dir/src/dataalginment.cpp.o
+my_executable: CMakeFiles/my_executable.dir/build.make
+my_executable: libC_library.a
+my_executable: CMakeFiles/my_executable.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable my_executable"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_executable.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Running my_executable"
-	./my_executable
+	bin/my_executable
 
 # Rule to build all files generated by this target.
-CMakeFiles/my_executable.dir/build: ../bin/my_executable
+CMakeFiles/my_executable.dir/build: my_executable
 .PHONY : CMakeFiles/my_executable.dir/build
 
 CMakeFiles/my_executable.dir/clean:

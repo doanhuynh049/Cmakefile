@@ -1,0 +1,2 @@
+/usr/bin/ar qc libC_library.a CMakeFiles/C_library.dir/src/typedef.c.o
+/usr/bin/ranlib libC_library.a

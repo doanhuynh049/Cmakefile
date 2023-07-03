@@ -1,13 +1,13 @@
 file(REMOVE_RECURSE
-  "../bin/my_executable"
-  "../bin/my_executable.pdb"
-  "CMakeFiles/my_executable.dir/src/main.c.o"
-  "CMakeFiles/my_executable.dir/src/main.c.o.d"
-  "CMakeFiles/my_executable.dir/src/typedef.c.o"
-  "CMakeFiles/my_executable.dir/src/typedef.c.o.d"
+  "CMakeFiles/my_executable.dir/src/dataalginment.cpp.o"
+  "CMakeFiles/my_executable.dir/src/dataalginment.cpp.o.d"
+  "CMakeFiles/my_executable.dir/src/main.cpp.o"
+  "CMakeFiles/my_executable.dir/src/main.cpp.o.d"
+  "my_executable"
+  "my_executable.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang C)
+foreach(lang CXX)
   include(CMakeFiles/my_executable.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

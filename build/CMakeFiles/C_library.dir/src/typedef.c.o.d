@@ -1,5 +1,6 @@
-CMakeFiles/my_executable.dir/src/main.c.o: \
- /home/quat/Cprogram/Cmakefile/src/main.c /usr/include/stdc-predef.h \
+CMakeFiles/C_library.dir/src/typedef.c.o: \
+ /home/quat/Cprogram/Cmakefile/src/typedef.c /usr/include/stdc-predef.h \
+ /home/quat/Cprogram/Cmakefile/src/../include/typedef.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -22,6 +23,4 @@ CMakeFiles/my_executable.dir/src/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /home/quat/Cprogram/Cmakefile/src/../include/typedef.h \
- /home/quat/Cprogram/Cmakefile/src/../include/dataalignment.h
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h

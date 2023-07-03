@@ -8,13 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/quat/Cprogram/Cmakefile/src/dataalginment.cpp" "CMakeFiles/my_executable.dir/src/dataalginment.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/dataalginment.cpp.o.d"
-  "/home/quat/Cprogram/Cmakefile/src/main.cpp" "CMakeFiles/my_executable.dir/src/main.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/main.cpp.o.d"
+  "/home/quat/Cprogram/Cmakefile/src/typedef.c" "CMakeFiles/C_library.dir/src/typedef.c.o" "gcc" "CMakeFiles/C_library.dir/src/typedef.c.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/quat/Cprogram/Cmakefile/build/CMakeFiles/C_library.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

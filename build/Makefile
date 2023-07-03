@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named C_library
+
+# Build rule for target.
+C_library: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 C_library
+.PHONY : C_library
+
+# fast build rule for target.
+C_library/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C_library.dir/build.make CMakeFiles/C_library.dir/build
+.PHONY : C_library/fast
+
+#=============================================================================
 # Target rules for targets named my_executable
 
 # Build rule for target.
@@ -129,36 +142,60 @@ my_executable/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/build
 .PHONY : my_executable/fast
 
-src/main.o: src/main.c.o
+src/dataalginment.o: src/dataalginment.cpp.o
+.PHONY : src/dataalginment.o
+
+# target to build an object file
+src/dataalginment.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/dataalginment.cpp.o
+.PHONY : src/dataalginment.cpp.o
+
+src/dataalginment.i: src/dataalginment.cpp.i
+.PHONY : src/dataalginment.i
+
+# target to preprocess a source file
+src/dataalginment.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/dataalginment.cpp.i
+.PHONY : src/dataalginment.cpp.i
+
+src/dataalginment.s: src/dataalginment.cpp.s
+.PHONY : src/dataalginment.s
+
+# target to generate assembly for a file
+src/dataalginment.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/dataalginment.cpp.s
+.PHONY : src/dataalginment.cpp.s
+
+src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
-src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/main.c.o
-.PHONY : src/main.c.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-src/main.i: src/main.c.i
+src/main.i: src/main.cpp.i
 .PHONY : src/main.i
 
 # target to preprocess a source file
-src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/main.c.i
-.PHONY : src/main.c.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-src/main.s: src/main.c.s
+src/main.s: src/main.cpp.s
 .PHONY : src/main.s
 
 # target to generate assembly for a file
-src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/main.c.s
-.PHONY : src/main.c.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 src/typedef.o: src/typedef.c.o
 .PHONY : src/typedef.o
 
 # target to build an object file
 src/typedef.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/typedef.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C_library.dir/build.make CMakeFiles/C_library.dir/src/typedef.c.o
 .PHONY : src/typedef.c.o
 
 src/typedef.i: src/typedef.c.i
@@ -166,7 +203,7 @@ src/typedef.i: src/typedef.c.i
 
 # target to preprocess a source file
 src/typedef.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/typedef.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C_library.dir/build.make CMakeFiles/C_library.dir/src/typedef.c.i
 .PHONY : src/typedef.c.i
 
 src/typedef.s: src/typedef.c.s
@@ -174,7 +211,7 @@ src/typedef.s: src/typedef.c.s
 
 # target to generate assembly for a file
 src/typedef.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/typedef.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C_library.dir/build.make CMakeFiles/C_library.dir/src/typedef.c.s
 .PHONY : src/typedef.c.s
 
 # Help Target
@@ -185,7 +222,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... C_library"
 	@echo "... my_executable"
+	@echo "... src/dataalginment.o"
+	@echo "... src/dataalginment.i"
+	@echo "... src/dataalginment.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
