@@ -1,16 +1,19 @@
 cmake_minimum_required(VERSION 3.0)
 project(CMakefile)
-set(CMAKE_C_STANDARD 11)
 
+# Set the C/C++ standard to C11 C++17
+set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# add the source file to the project
-# add_library(my_executable src/dataalginment.cpp)
+# add the C source file to the project
+add_library(C_library src/typedef.c)
+
+# add the CXX source file to the project
 add_executable(my_executable
-    src/main.c
-    src/typedef.c
+    src/main.cpp
+    src/dataalginment.cpp
 )
 
 # add header file to the project
@@ -20,12 +23,16 @@ target_sources(my_executable PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/typedef
 target_sources(my_executable PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/dataalignment.h)
 
 # Link against any necessary libraries
-target_link_libraries(my_executable)
+target_link_libraries(my_executable C_library)
 
 # set the output directory for the executable and library
-set_target_properties(my_executable PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set_target_properties(my_executable PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/bin)
+
+set_target_properties(C_library PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/lib)
 
 # add custom commadn to run the executable after building it
 add_custom_command(TARGET my_executable POST_BUILD
-    COMMAND ${CMAKE_CURRENT_BINARY_DIR}/my_executable
-    COMMENT "Running my_executable")
+    COMMENT "Running my_executable"
+    COMMAND ${CMAKE_CURRENT_BINARY_DIR}/bin/my_executable
+    COMMAND ${CMAKE_COMMAND} -E remove ${CMAKE_CURRENT_BINARY_DIR}/bin/my_executable
+)
