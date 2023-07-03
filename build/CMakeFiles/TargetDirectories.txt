@@ -1,0 +1,3 @@
+/home/quat/Cprogram/Cmakefile/build/CMakeFiles/my_executable.dir
+/home/quat/Cprogram/Cmakefile/build/CMakeFiles/edit_cache.dir
+/home/quat/Cprogram/Cmakefile/build/CMakeFiles/rebuild_cache.dir

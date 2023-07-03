@@ -1,0 +1,552 @@
+cmake_minimum_required(VERSION 3.1)
+project("cctv" LANGUAGES CXX)
+
+## Locate GTest
+##find_package(GTest REQUIRED)
+
+#include_directories(${GTEST_INCLUDE_DIRS})
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/QtWidgets/")
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/QtGui/")
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/QtWebEngineWidgets/")
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/QtWebEngineCore/")
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/QtQuick/")
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/QtPrintSupport/")
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/QtQmlModels/")
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/QtWebChannel/")
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/QtQml/")
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/QtNetwork/")
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/QtPositioning/")
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/QtCore/")
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/Qt5WebEngineWidgets/")
+include_directories("$ENV{QT_DIR}/5.15.0/gcc_64/include/QtTest/")
+link_directories("$ENV{QT_DIR}/5.15.0/gcc_64/lib/")
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_C_COMPILER "/usr/bin/gcc")
+set(CMAKE_CXX_COMPILER "/usr/bin/g++")
+
+##Add the libraryt
+add_library(gtest SHARED IMPORTED)
+set_target_properties(gtest PROPERTIES
+  IMPORTED_LOCATION "/usr/lib/libgtest.a"
+  INTERFACE_INCLUDE_DIRECTORIES "/usr/include/"
+)
+
+add_library(gtest_main SHARED IMPORTED)
+set_target_properties(gtest_main PROPERTIES
+  IMPORTED_LOCATION "/usr/lib/libgtest_main.a"
+  INTERFACE_INCLUDE_DIRECTORIES "/usr/include/"
+)
+
+add_library(gmock SHARED IMPORTED)
+set_target_properties(gmock PROPERTIES
+  IMPORTED_LOCATION "/usr/lib/libgmock.a"
+  INTERFACE_INCLUDE_DIRECTORIES "/usr/include/"
+)
+
+add_library(gmock_main SHARED IMPORTED)
+set_target_properties(gmock_main PROPERTIES
+  IMPORTED_LOCATION "/usr/lib/libgmock_main.a"
+  INTERFACE_INCLUDE_DIRECTORIES "/usr/include/"
+)
+
+add_library(Qt5Widgets SHARED IMPORTED)
+set_target_properties(Qt5Widgets PROPERTIES
+  IMPORTED_LOCATION "$ENV{QT_DIR}/5.15.0/gcc_64/lib/libQt5Widgets.so"
+  INTERFACE_INCLUDE_DIRECTORIES "$ENV{QT_DIR}/5.15.0/gcc_64/include/QtWidgets"
+)
+add_library(Qt5Gui SHARED IMPORTED)
+set_target_properties(Qt5Gui PROPERTIES
+  IMPORTED_LOCATION "$ENV{QT_DIR}/5.15.0/gcc_64/lib/libQt5Gui.so"
+  INTERFACE_INCLUDE_DIRECTORIES "$ENV{QT_DIR}/5.15.0/gcc_64/include/QtGui/"
+)
+add_library(Qt5WebEngineWidgets SHARED IMPORTED) 
+set_target_properties(Qt5WebEngineWidgets PROPERTIES
+  IMPORTED_LOCATION "$ENV{QT_DIR}/5.15.0/gcc_64/lib/libQt5WebEngineWidgets.so"
+  INTERFACE_INCLUDE_DIRECTORIES "$ENV{QT_DIR}/5.15.0/gcc_64/include/QtWebEngineWidgets/"
+)
+
+add_library(Qt5WebEngineCore SHARED IMPORTED)
+set_target_properties(Qt5WebEngineCore PROPERTIES
+  IMPORTED_LOCATION "$ENV{QT_DIR}/5.15.0/gcc_64/lib/libQt5WebEngineCore.so"
+  INTERFACE_INCLUDE_DIRECTORIES "$ENV{QT_DIR}/5.15.0/gcc_64/include/QtWebEngineCore"
+)
+
+add_library(Qt5Quick SHARED IMPORTED)
+set_target_properties(Qt5Quick PROPERTIES
+  IMPORTED_LOCATION "$ENV{QT_DIR}/5.15.0/gcc_64/lib/libQt5Quick.so"
+  INTERFACE_INCLUDE_DIRECTORIES "$ENV{QT_DIR}/5.15.0/gcc_64/include/QtQuick"
+)
+
+add_library(Qt5PrintSupport SHARED IMPORTED)
+set_target_properties(Qt5PrintSupport PROPERTIES
+  IMPORTED_LOCATION "$ENV{QT_DIR}/5.15.0/gcc_64/lib/libQt5PrintSupport.so"
+  INTERFACE_INCLUDE_DIRECTORIES "$ENV{QT_DIR}/5.15.0/gcc_64/include/QtPrintSupport"
+)
+
+add_library(Qt5QmlModels SHARED IMPORTED)
+set_target_properties(Qt5QmlModels PROPERTIES
+  IMPORTED_LOCATION "$ENV{QT_DIR}/5.15.0/gcc_64/lib/libQt5QmlModels.so"
+  INTERFACE_INCLUDE_DIRECTORIES "$ENV{QT_DIR}/5.15.0/gcc_64/include/QtQmlModels"
+)
+
+add_library(Qt5WebChannel SHARED IMPORTED) 
+set_target_properties(Qt5WebChannel PROPERTIES
+  IMPORTED_LOCATION "$ENV{QT_DIR}/5.15.0/gcc_64/lib/libQt5WebChannel.so"
+  INTERFACE_INCLUDE_DIRECTORIES "$ENV{QT_DIR}/5.15.0/gcc_64/include/QtWebChannel"
+)
+
+add_library(Qt5Qml SHARED IMPORTED) 
+set_target_properties(Qt5Qml PROPERTIES
+  IMPORTED_LOCATION "$ENV{QT_DIR}/5.15.0/gcc_64/lib/libQt5Qml.so"
+  INTERFACE_INCLUDE_DIRECTORIES "$ENV{QT_DIR}/5.15.0/gcc_64/include/QtQml"
+)
+
+add_library(Qt5Network SHARED IMPORTED) 
+set_target_properties(Qt5Network PROPERTIES
+  IMPORTED_LOCATION "$ENV{QT_DIR}/5.15.0/gcc_64/lib/libQt5Network.so"
+  INTERFACE_INCLUDE_DIRECTORIES "$ENV{QT_DIR}/5.15.0/gcc_64/include/QtNetwork"
+)
+
+add_library(Qt5Positioning SHARED IMPORTED) 
+set_target_properties(Qt5Positioning PROPERTIES
+  IMPORTED_LOCATION "$ENV{QT_DIR}/5.15.0/gcc_64/lib/libQt5Positioning.so"
+  INTERFACE_INCLUDE_DIRECTORIES "$ENV{QT_DIR}/5.15.0/gcc_64/include/QtPositioning"
+)
+
+add_library(Qt5Test SHARED IMPORTED)
+set_target_properties(Qt5Test PROPERTIES
+  IMPORTED_LOCATION "$ENV{QT_DIR}/5.15.0/gcc_64/lib/libQt5Test.so"
+  INTERFACE_INCLUDE_DIRECTORIES "$ENV{QT_DIR}/5.15.0/gcc_64/include/"
+)
+
+add_library(Qt5Core SHARED IMPORTED) 
+set_target_properties(Qt5Core PROPERTIES
+  IMPORTED_LOCATION "$ENV{QT_DIR}/5.15.0/gcc_64/lib/libQt5Core.so"
+  INTERFACE_INCLUDE_DIRECTORIES "$ENV{QT_DIR}/5.15.0/gcc_64/include/QtCore"
+)
+
+add_library(service SHARED IMPORTED) 
+set_target_properties(service PROPERTIES
+  IMPORTED_LOCATION "/usr/lib/libservice.so"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/cuong/lienvl/m_cctvh265_display_gtest/06_cctvtest/gtest/stub/inc"
+)
+
+add_library(curl SHARED IMPORTED) 
+set_target_properties(curl PROPERTIES
+  IMPORTED_LOCATION "/usr/lib/x86_64-linux-gnu/libcurl.so"
+  INTERFACE_INCLUDE_DIRECTORIES "/usr/include/curl"
+)
+
+add_library(sqlite3 SHARED IMPORTED) 
+set_target_properties(sqlite3 PROPERTIES
+  IMPORTED_LOCATION "/usr/lib/x86_64-linux-gnu/libsqlite3.so"
+  INTERFACE_INCLUDE_DIRECTORIES "/opt/rootfs/usr/include/sqlite"
+)
+
+link_libraries(gtest gtest_main gmock gmock_main pthread Qt5Gui Qt5Widgets Qt5Core Qt5WebEngineCore Qt5Quick Qt5PrintSupport Qt5QmlModels Qt5WebChannel Qt5Qml Qt5Network Qt5Positioning Qt5Test Qt5WebEngineWidgets service curl sqlite3 GL pthread)
+
+##set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+## Include our source directories
+set(CMAKE_INCLUDE_CURRENT_DIR True)
+
+## Set gcov flags
+set(CMAKE_CXX_FLAGS "-fprofile-arcs -ftest-coverage")
+set(CMAKE_EXE_LINKER_FLAGS "-lgcov")
+
+## Define executables for each test suite
+set(SIMPLE "cctv")
+add_definitions(-DCCTV_UT)
+
+## Add new file to src when doing new task.
+add_executable(${SIMPLE} "src/UT_Cashier_GUI.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/common/SliderPanel/SlideBarSearch.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui/controller/common/SecurityLockNotification/securitylocknotification.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/GuiCommon.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//controller/common/builtin/BuiltIn.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/WebView/WebUISetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/ConnectState.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//controller/scrmgr/ScreenManagerCtrl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//controller/ui008/subscreens/SystemSetting/CopySettingCtrl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//controller/ui008/subscreens/SystemSetting/RemoteDeliverySettingCtrl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//controller/ui008/subscreens/SystemSetting/StartingScreenSettingCtrl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//controller/ui008/subscreens/SystemSetting/TimeSettingCtrl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//controller/ui008/subscreens/SystemSetting/VoiceDelayingTimeSettingCtrl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//controller/ui008/subscreens/SystemSettingCtrl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//controller/ui008/SettingScreenCtrl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/abstract/AbstractWidget.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/language/MultipleLanguage.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/dialog/ConfirmingScreen.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/dialog/GlobalDialogs.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/dialog/ProgressDialog.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/initscr/SettingFirstTimeScreen.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/scrmgr/ScreenManager.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/control/CameraBasic.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/control/CameraEnhancing.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/control/CameraRegister.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/control/ClockCameraCopyControl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/control/CopyControlPanel.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/control/CopyProgressBar.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/control/TurnButton.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/menu/volume/ProgressBar.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/menu/volume/VolumeControl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui001/menu/EquipmentFailureList/DevSearch.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/menu/Home.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/menu/MenuButton.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/menu/MenuManager.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/CameraControl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/ImageDisplay.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/CameraList.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/LogoDisplay.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/MainScreenDisplay.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/StatusIcon.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui007/MainBodyPlayback.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui007/PlaybackCameraControl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui007/PlaybackCameraDisplay.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui007/PlaybackLogoDisplay.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui007/PlaybackStatusIcon.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui007/playcontrol/PlaybackControl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/control/CQComboBox.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/control/HMITable.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraSetting/CameraSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/ScheduleSetting/BarGraphSchedule.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/SystemSetting/ScalablePanel/ScalablePanel.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/SystemSetting/CopySetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/SystemSetting/RemoteDeliverySetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/SystemSetting/StartingScreenSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/SystemSetting/TimeSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/SystemSetting/VoiceDelayingTimeSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/SystemSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/SettingScreen.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/updatesetting/UpdateSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//submonitorlayout/receivesubmonitorevent.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//submonitorlayout/subMonitorApp.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//submonitorlayout/subdispCamName.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//submonitorlayout/submonitorscreen.cpp" /
+"$ENV{PROJECT_DIR}/03_srv/wrapper/src/EBFConnector.cpp" /
+##"$ENV{PROJECT_DIR}/03_srv/wrapper/src/EBFConnector_ServiceCall.cpp" /
+"$ENV{PROJECT_DIR}/03_srv/wrapper/src/EdamameAdapter.cpp" /
+"$ENV{PROJECT_DIR}//03_srv/wrapper/src/EventElement.cpp" /
+"$ENV{PROJECT_DIR}/03_srv/wrapper/src/ServiceNatives.cpp" /
+"$ENV{PROJECT_DIR}/03_srv/src/StorageUnitInterface/CCTVRecSearchControl.cpp" /
+"$ENV{PROJECT_DIR}/03_srv/src/StorageCommonInfo/CCTVRecTimeout.cpp" /
+"$ENV{PROJECT_DIR}/03_srv/src/Utilities/CCTVUtils.cpp" /
+"$ENV{PROJECT_DIR}/03_srv/src/Utilities/CCTVString.cpp" /
+##"$ENV{PROJECT_DIR}/03_srv/src/Utilities/CCTVDBAccess.cpp" /
+"$ENV{PROJECT_DIR}/03_srv/src/Utilities/CCTVRecHTTPClient.cpp" /
+"$ENV{PROJECT_DIR}/03_srv/src/StorageUnitInterface/CCTVRecSearchControl.cpp" /
+"$ENV{PROJECT_DIR}/03_srv/src/DBInterface/CCTVRecDBInterface.cpp" /
+"$ENV{PROJECT_DIR}/03_srv/src/MainMonitorController/CCTVGUIRequestTask.cpp" /
+"$ENV{PROJECT_DIR}/03_srv/src/StorageCommonInfo/CCTVRecStorageCommonInfo.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/language/englishlanguage.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/language/germanylanguage.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/language/japaneselanguage.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/language/polishlanguage.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/language/russianlanguage.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/language/spanishlanguage.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/language/thailanguage.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui005/calendardialog.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui005/CameraSelectionCheckBox.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui005/ComboboxSelectTime.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui005/Copy_StartScreen.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui005/CopyOrigin.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui005/CopyRangeSpecificationArea.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui005/DeviceConnectInformation.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui005/DisplayAreaAlways.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui005/PasswordRegistrationArea.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui005/USBDeviceInfoArea.cpp" 
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/CalendarPanel/CalendarPanel.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/CalendarPanel/CustomCalendar.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/SliderPanel/MinuteSlider.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/SliderPanel/SlideBarSearch.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/SliderPanel/SliderSearch.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/SliderPanel/CustomSlider.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui004/SearchThumbnail.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui004/SearchThumbnailScreen.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui013/FaceThumbnail.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui013/SearchFaceThumbnailScreen.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/menu/System.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/dialog/YesNoScreen.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui006/PlayVideoClip.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui006/FolderInformationPlayBackAhead.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui006/TheOperationDescription.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui006/PasswordCheckingArea.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui006/KeyboardTenkey.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui006/ClockAndLogo.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui009/SecurityLock.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui009/TenKeyA.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/menu/EquipmentFailureList/AlarmSearch.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/menu/EquipmentFailureList/EquipmentFailureList.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/menu/EquipmentFailureList/AlarmList.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/menu/AlarmAndSearchPanel/ImageButton.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/menu/AlarmAndSearchPanel/PlayControl.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/menu/AlarmAndSearchPanel/SearchPanel.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui001/menu/EquipmentFailureList/CustomCalendarDialog.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/Table/Table.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/dialog/PWDialog.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/dialog/ConfirmScreenPanel.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/dialog/ReadingFolderDialog.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui002/FullScreen.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/ScheduleSetting/BarGraphRecSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/ScheduleSetting/ListSpecificDay.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/ScheduleSetting/ScheduleSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui002/CamNamePart.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/MainMonitor/SplitScreenSelection.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/MainMonitor/SpecificationPage.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/MainMonitor/MainMonitor.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/MainMonitor/CameraTableDisplay.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/MainMonitor/CameraSpecifications.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/SubMonitor/SubMonitor.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/ManagementSetting/ManagementSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/ManagementSetting/VersionUpgradeRecorder.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/ManagementSetting/VersionUpgradeCamera.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/ManagementSettingMain.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/ManagementSetting/VersionUpgradeFileListPart.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/ManagementSetting/OperationHistory.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//controller/common/builtin/HMI_DB_table.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/AlarmSetting/alarmsettingpanel.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/AlarmSetting/alarmmasksettingcpy.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/VersionDisplay/versionlist.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/VersionDisplay/versiondisplay.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/AlarmSettingMain.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/ScheduleSetting/SettingCopyScreen.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraSettingMain.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/MotionDetectionCam/MotionDetectIICamOld.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/MotionDetectionCam/MotionDetectIIICam.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/MotionDetectionCam/MotionDetectionIICamNew.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/AreaSelect.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/BasicSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/CameraDetailSettingPanel.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/EncodingDetailed.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/FaceThumbnailCam.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/GainSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/IconPanel.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/LightSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/MaintenanceInit.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/MaintenanceLog.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/MaintenanceOSDDisplay.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/MaskingIICam.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/MaskingIIICam.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/MischievousDetectionSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraDetail/MotionDetectionCam.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/CameraAdvanceSetting/CameraAdvanceSetting.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/CCTVTableWidget/CCTVTableWidget.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/ClickableLabel/ClickableLabel.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/KeyBoardPanel/KeyBoardPanel.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/WebView/jsapiprovider.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/CustomWebEngine/CustomWebEnginePage.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui014/ActivationCodeScreen.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/dialog/WebConfirm.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/CustomWebEngine/CustomWebEngineView.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/dialog/WebAlert.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui014/SoftwareKeyboard.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/NotifyVersionUp/NotifyVersionUp.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/ui008/subscreens/ScheduleSetting/QLineDelegate.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/LineEdit/CustomLineEdit.cpp" /
+"$ENV{PROJECT_DIR}/04_gui/gui//layout/common/CCTVListView/cctvlistview.cpp" /
+"qt_moc/moc_securitylocknotification.cpp" /
+"qt_moc/moc_ClickableLabel.cpp" /
+"qt_moc/moc_WebUISetting.cpp" /
+"qt_moc/moc_jsapiprovider.cpp" /
+"qt_moc/moc_AbstractWidget.cpp" /
+"qt_moc/moc_GuiCommon.cpp" /
+"qt_moc/moc_CustomSlider.cpp" /
+"qt_moc/moc_KeyBoardPanel.cpp" /
+"qt_moc/moc_NotifyVersionUp.cpp" /
+"qt_moc/moc_CustomLineEdit.cpp" /
+"qt_moc/moc_ConfirmingScreen.cpp" /
+"qt_moc/moc_GlobalDialogs.cpp" /
+"qt_moc/moc_ProgressDialog.cpp" /
+"qt_moc/moc_WebAlert.cpp" /
+"qt_moc/moc_WebConfirm.cpp" /
+"qt_moc/moc_SettingFirstTimeScreen.cpp" /
+"qt_moc/moc_ScreenManager.cpp" /
+"qt_moc/moc_CameraBasic.cpp" /
+"qt_moc/moc_CameraEnhancing.cpp" /
+"qt_moc/moc_CameraRegister.cpp" /
+"qt_moc/moc_ClockCameraCopyControl.cpp" /
+"qt_moc/moc_CopyControlPanel.cpp" /
+"qt_moc/moc_CopyProgressBar.cpp" /
+"qt_moc/moc_TurnButton.cpp" /
+"qt_moc/moc_ProgressBar.cpp" /
+"qt_moc/moc_VolumeControl.cpp" /
+"qt_moc/moc_Home.cpp" /
+"qt_moc/moc_MenuButton.cpp" /
+"qt_moc/moc_MenuManager.cpp" /
+"qt_moc/moc_CameraControl.cpp" /
+"qt_moc/moc_ImageDisplay.cpp" /
+"qt_moc/moc_CameraList.cpp" /
+"qt_moc/moc_LogoDisplay.cpp" /
+"qt_moc/moc_MainScreenDisplay.cpp" /
+"qt_moc/moc_StatusIcon.cpp" /
+"qt_moc/moc_MainBodyPlayback.cpp" /
+"qt_moc/moc_PlaybackCameraControl.cpp" /
+"qt_moc/moc_PlaybackCameraDisplay.cpp" /
+"qt_moc/moc_PlaybackLogoDisplay.cpp" /
+"qt_moc/moc_PlaybackStatusIcon.cpp" /
+"qt_moc/moc_PlaybackControl.cpp" /
+"qt_moc/moc_CQComboBox.cpp" /
+"qt_moc/moc_HMITable.cpp" /
+"qt_moc/moc_BarGraphSchedule.cpp" /
+"qt_moc/moc_ScalablePanel.cpp" /
+"qt_moc/moc_CopySetting.cpp" /
+"qt_moc/moc_RemoteDeliverySetting.cpp" /
+"qt_moc/moc_StartingScreenSetting.cpp" /
+"qt_moc/moc_TimeSetting.cpp" /
+"qt_moc/moc_VoiceDelayingTimeSetting.cpp" /
+"qt_moc/moc_SystemSetting.cpp" /
+"qt_moc/moc_SettingScreen.cpp" /
+"qt_moc/moc_CameraAdvanceSetting.cpp" /
+"qt_moc/moc_UpdateSetting.cpp" /
+"qt_moc/moc_subdispCamName.cpp" /
+"qt_moc/moc_submonitorscreen.cpp" /
+"qt_moc/moc_EBFConnector.cpp" /
+"qt_moc/moc_calendardialog.cpp" /
+"qt_moc/moc_CameraSelectionCheckBox.cpp" /
+"qt_moc/moc_ComboboxSelectTime.cpp" /
+"qt_moc/moc_CopyOrigin.cpp" /
+"qt_moc/moc_CopyRangeSpecificationArea.cpp" /
+"qt_moc/moc_DeviceConnectInformation.cpp" /
+"qt_moc/moc_DisplayAreaAlways.cpp" /
+"qt_moc/moc_PasswordRegistrationArea.cpp" /
+"qt_moc/moc_USBDeviceInfoArea.cpp" /
+"qt_moc/moc_CalendarPanel.cpp" /
+"qt_moc/moc_CustomCalendar.cpp" /
+"qt_moc/moc_MinuteSlider.cpp" /
+"qt_moc/moc_SlideBarSearch.cpp" /
+"qt_moc/moc_SliderSearch.cpp" /
+"qt_moc/moc_SearchThumbnail.cpp" /
+"qt_moc/moc_SearchThumbnailScreen.cpp" /
+"qt_moc/moc_FaceThumbnail.cpp" /
+"qt_moc/moc_SearchFaceThumbnailScreen.cpp" /
+"qt_moc/moc_System.cpp" /
+"qt_moc/moc_YesNoScreen.cpp" /
+"qt_moc/moc_PlayVideoClip.cpp" /
+"qt_moc/moc_FolderInformationPlayBackAhead.cpp" /
+"qt_moc/moc_TheOperationDescription.cpp" /
+"qt_moc/moc_PasswordCheckingArea.cpp" /
+"qt_moc/moc_KeyboardTenkey.cpp" /
+"qt_moc/moc_ClockAndLogo.cpp" /
+"qt_moc/moc_Copy_StartScreen.cpp" /
+"qt_moc/moc_SecurityLock.cpp" /
+"qt_moc/moc_TenKeyA.cpp" /
+"qt_moc/moc_AlarmSearch.cpp" /
+"qt_moc/moc_EquipmentFailureList.cpp" /
+"qt_moc/moc_AlarmList.cpp" /
+"qt_moc/moc_ImageButton.cpp" /
+"qt_moc/moc_PlayControl.cpp" /
+"qt_moc/moc_SearchPanel.cpp" /
+"qt_moc/moc_CustomCalendarDialog.cpp" /
+"qt_moc/moc_Table.cpp" /
+"qt_moc/moc_PWDialog.cpp" /
+"qt_moc/moc_ConfirmScreenPanel.cpp" /
+"qt_moc/moc_ReadingFolderDialog.cpp" /
+"qt_moc/moc_FullScreen.cpp" /
+"qt_moc/moc_BarGraphRecSetting.cpp" /
+"qt_moc/moc_ListSpecificDay.cpp" /
+"qt_moc/moc_ScheduleSetting.cpp" /
+"qt_moc/moc_CamNamePart.cpp" /
+"qt_moc/moc_SplitScreenSelection.cpp" /
+"qt_moc/moc_SpecificationPage.cpp" /
+"qt_moc/moc_MainMonitor.cpp" /
+"qt_moc/moc_CameraTableDisplay.cpp" /
+"qt_moc/moc_CameraSpecifications.cpp" /
+"qt_moc/moc_SubMonitor.cpp" /
+"qt_moc/moc_ManagementSetting.cpp" /
+"qt_moc/moc_VersionUpgradeRecorder.cpp" /
+"qt_moc/moc_VersionUpgradeCamera.cpp" /
+"qt_moc/moc_ManagementSettingMain.cpp" /
+"qt_moc/moc_VersionUpgradeFileListPart.cpp" /
+"qt_moc/moc_OperationHistory.cpp" /
+"qt_moc/moc_ConnectState.cpp" /
+"qt_moc/moc_alarmmasksettingcpy.cpp" /
+"qt_moc/moc_alarmsettingpanel.cpp" /
+"qt_moc/moc_versionlist.cpp" /
+"qt_moc/moc_versiondisplay.cpp" /
+"qt_moc/moc_AlarmSettingMain.cpp" /
+"qt_moc/moc_SettingCopyScreen.cpp" /
+"qt_moc/moc_CameraSettingMain.cpp" /
+"qt_moc/moc_CameraSetting.cpp" /
+"qt_moc/moc_MotionDetectIICamOld.cpp" /
+"qt_moc/moc_MotionDetectIIICam.cpp" /
+"qt_moc/moc_MotionDetectionIICamNew.cpp" /
+"qt_moc/moc_AreaSelect.cpp" /
+"qt_moc/moc_BasicSetting.cpp" /
+"qt_moc/moc_CameraDetailSettingPanel.cpp" /
+"qt_moc/moc_EncodingDetailed.cpp" /
+"qt_moc/moc_FaceThumbnailCam.cpp" /
+"qt_moc/moc_GainSetting.cpp" /
+"qt_moc/moc_IconPanel.cpp" /
+"qt_moc/moc_LightSetting.cpp" /
+"qt_moc/moc_MaintenanceInit.cpp" /
+"qt_moc/moc_MaintenanceLog.cpp" /
+"qt_moc/moc_MaintenanceOSDDisplay.cpp" /
+"qt_moc/moc_MaskingIICam.cpp" /
+"qt_moc/moc_MaskingIIICam.cpp" /
+"qt_moc/moc_MischievousDetectionSetting.cpp" /
+"qt_moc/moc_MotionDetectionCam.cpp" /
+"qt_moc/moc_ActivationCodeScreen.cpp" /
+"qt_moc/moc_SoftwareKeyboard.cpp" /
+"qt_moc/moc_DevSearch.cpp" /
+"stub/src/cctv_stubs.cpp" /
+"stub/src/log.cpp")
+
+target_include_directories("cctv"
+	PUBLIC /
+"$ENV{PROJECT_DIR}/04_gui/build" /
+"qt_moc" /
+"include" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/common/SliderPanel" /
+"$ENV{PROJECT_DIR}/04_gui/gui/controller/common/builtin" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/common" /
+"$ENV{PROJECT_DIR}/03_srv/inc" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/common" /
+"$ENV{PROJECT_DIR}/03_srv/wrapper/inc" /
+"$ENV{PROJECT_DIR}/02_mw/play/inc" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/common/abstract" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/common/language" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/subscreens" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/subscreens/SystemSetting" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/scrmgr" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/control" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui001" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/dialog" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui002" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui005" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui014" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/common/NotifyVersionUp" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui006" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui013" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui004" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/common/CalendarPanel" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui009" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/initscr" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/updatesetting" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui007" /
+"$ENV{PROJECT_DIR}/04_gui/gui/submonitorlayout" /
+"$ENV{PROJECT_DIR}/04_gui/gui/controller/common/SecurityLockNotification" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui001/control" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui001/menu/volume" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui001/menu" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui001/menu/EquipmentFailureList" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui001/menu/AlarmAndSearchPanel" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui007/playcontrol" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/subscreens/ScheduleSetting" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/subscreens/CameraAdvanceSetting" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/subscreens/SystemSetting/ScalablePanel" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/subscreens/MainMonitor" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/subscreens/SubMonitor" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/common/WebView" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/subscreens/VersionDisplay" /
+"$ENV{PROJECT_DIR}/01_cmn/loglib" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/common/ClickableLabel" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/common/KeyBoardPanel" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/common/LineEdit" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/common/Table" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/subscreens/ManagementSetting" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/subscreens/AlarmSetting" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/subscreens/CameraDetail" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/subscreens/CameraSetting" /
+"$ENV{PROJECT_DIR}/04_gui/gui/layout/ui008/subscreens/CameraDetail/MotionDetectionCam" /
+"$ENV{PROJECT_DIR}/01_cmn/loglib/")
