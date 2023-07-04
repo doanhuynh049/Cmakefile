@@ -3,6 +3,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_executable.dir/src/dataalginment.cpp.o.d"
   "CMakeFiles/my_executable.dir/src/main.cpp.o"
   "CMakeFiles/my_executable.dir/src/main.cpp.o.d"
+  "CMakeFiles/my_executable.dir/src/shape.cpp.o"
+  "CMakeFiles/my_executable.dir/src/shape.cpp.o.d"
+  "CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o"
+  "CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o.d"
+  "CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o"
+  "CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o.d"
   "bin/my_executable"
   "bin/my_executable.pdb"
 )

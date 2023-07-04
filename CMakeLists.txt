@@ -14,13 +14,21 @@ add_library(C_library src/typedef.c)
 add_executable(my_executable
     src/main.cpp
     src/dataalginment.cpp
+    src/virtualkeyword.cpp
+    src/shape.cpp
+    src/virtualdestructor.cpp
 )
 
 # add header file to the project
 target_include_directories(my_executable PRIVATE ${CMAKE_CUTTENT_SOURCE_DIR}/include)
 target_sources(my_executable PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/typedef.h
 )
-target_sources(my_executable PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/dataalignment.h)
+
+# CXX
+target_sources(my_executable PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/dataalignment.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/virtualkeyword.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/virtualdestructor.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/shape.h)
 
 # Link against any necessary libraries
 target_link_libraries(my_executable C_library)

@@ -97,20 +97,68 @@ CMakeFiles/my_executable.dir/src/dataalginment.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/dataalginment.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/dataalginment.cpp -o CMakeFiles/my_executable.dir/src/dataalginment.cpp.s
 
+CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o: ../src/virtualkeyword.cpp
+CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o -MF CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o.d -o CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o -c /home/quat/Cprogram/Cmakefile/src/virtualkeyword.cpp
+
+CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quat/Cprogram/Cmakefile/src/virtualkeyword.cpp > CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.i
+
+CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/virtualkeyword.cpp -o CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.s
+
+CMakeFiles/my_executable.dir/src/shape.cpp.o: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/src/shape.cpp.o: ../src/shape.cpp
+CMakeFiles/my_executable.dir/src/shape.cpp.o: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/my_executable.dir/src/shape.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/src/shape.cpp.o -MF CMakeFiles/my_executable.dir/src/shape.cpp.o.d -o CMakeFiles/my_executable.dir/src/shape.cpp.o -c /home/quat/Cprogram/Cmakefile/src/shape.cpp
+
+CMakeFiles/my_executable.dir/src/shape.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/src/shape.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quat/Cprogram/Cmakefile/src/shape.cpp > CMakeFiles/my_executable.dir/src/shape.cpp.i
+
+CMakeFiles/my_executable.dir/src/shape.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/shape.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/shape.cpp -o CMakeFiles/my_executable.dir/src/shape.cpp.s
+
+CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o: ../src/virtualdestructor.cpp
+CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o -MF CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o.d -o CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o -c /home/quat/Cprogram/Cmakefile/src/virtualdestructor.cpp
+
+CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quat/Cprogram/Cmakefile/src/virtualdestructor.cpp > CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.i
+
+CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/virtualdestructor.cpp -o CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.s
+
 # Object files for target my_executable
 my_executable_OBJECTS = \
 "CMakeFiles/my_executable.dir/src/main.cpp.o" \
-"CMakeFiles/my_executable.dir/src/dataalginment.cpp.o"
+"CMakeFiles/my_executable.dir/src/dataalginment.cpp.o" \
+"CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o" \
+"CMakeFiles/my_executable.dir/src/shape.cpp.o" \
+"CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o"
 
 # External object files for target my_executable
 my_executable_EXTERNAL_OBJECTS =
 
 bin/my_executable: CMakeFiles/my_executable.dir/src/main.cpp.o
 bin/my_executable: CMakeFiles/my_executable.dir/src/dataalginment.cpp.o
+bin/my_executable: CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o
+bin/my_executable: CMakeFiles/my_executable.dir/src/shape.cpp.o
+bin/my_executable: CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o
 bin/my_executable: CMakeFiles/my_executable.dir/build.make
 bin/my_executable: libC_library.a
 bin/my_executable: CMakeFiles/my_executable.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bin/my_executable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable bin/my_executable"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_executable.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Running my_executable"
 	bin/my_executable

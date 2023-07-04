@@ -10,6 +10,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/quat/Cprogram/Cmakefile/src/dataalginment.cpp" "CMakeFiles/my_executable.dir/src/dataalginment.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/dataalginment.cpp.o.d"
   "/home/quat/Cprogram/Cmakefile/src/main.cpp" "CMakeFiles/my_executable.dir/src/main.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/main.cpp.o.d"
+  "/home/quat/Cprogram/Cmakefile/src/shape.cpp" "CMakeFiles/my_executable.dir/src/shape.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/shape.cpp.o.d"
+  "/home/quat/Cprogram/Cmakefile/src/virtualdestructor.cpp" "CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o.d"
+  "/home/quat/Cprogram/Cmakefile/src/virtualkeyword.cpp" "CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o.d"
   )
 
 # Targets to which this target links.

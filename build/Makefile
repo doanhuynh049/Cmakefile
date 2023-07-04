@@ -190,6 +190,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/shape.o: src/shape.cpp.o
+.PHONY : src/shape.o
+
+# target to build an object file
+src/shape.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/shape.cpp.o
+.PHONY : src/shape.cpp.o
+
+src/shape.i: src/shape.cpp.i
+.PHONY : src/shape.i
+
+# target to preprocess a source file
+src/shape.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/shape.cpp.i
+.PHONY : src/shape.cpp.i
+
+src/shape.s: src/shape.cpp.s
+.PHONY : src/shape.s
+
+# target to generate assembly for a file
+src/shape.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/shape.cpp.s
+.PHONY : src/shape.cpp.s
+
 src/typedef.o: src/typedef.c.o
 .PHONY : src/typedef.o
 
@@ -214,6 +238,54 @@ src/typedef.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/C_library.dir/build.make CMakeFiles/C_library.dir/src/typedef.c.s
 .PHONY : src/typedef.c.s
 
+src/virtualdestructor.o: src/virtualdestructor.cpp.o
+.PHONY : src/virtualdestructor.o
+
+# target to build an object file
+src/virtualdestructor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o
+.PHONY : src/virtualdestructor.cpp.o
+
+src/virtualdestructor.i: src/virtualdestructor.cpp.i
+.PHONY : src/virtualdestructor.i
+
+# target to preprocess a source file
+src/virtualdestructor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.i
+.PHONY : src/virtualdestructor.cpp.i
+
+src/virtualdestructor.s: src/virtualdestructor.cpp.s
+.PHONY : src/virtualdestructor.s
+
+# target to generate assembly for a file
+src/virtualdestructor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.s
+.PHONY : src/virtualdestructor.cpp.s
+
+src/virtualkeyword.o: src/virtualkeyword.cpp.o
+.PHONY : src/virtualkeyword.o
+
+# target to build an object file
+src/virtualkeyword.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o
+.PHONY : src/virtualkeyword.cpp.o
+
+src/virtualkeyword.i: src/virtualkeyword.cpp.i
+.PHONY : src/virtualkeyword.i
+
+# target to preprocess a source file
+src/virtualkeyword.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.i
+.PHONY : src/virtualkeyword.cpp.i
+
+src/virtualkeyword.s: src/virtualkeyword.cpp.s
+.PHONY : src/virtualkeyword.s
+
+# target to generate assembly for a file
+src/virtualkeyword.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.s
+.PHONY : src/virtualkeyword.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -230,9 +302,18 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/shape.o"
+	@echo "... src/shape.i"
+	@echo "... src/shape.s"
 	@echo "... src/typedef.o"
 	@echo "... src/typedef.i"
 	@echo "... src/typedef.s"
+	@echo "... src/virtualdestructor.o"
+	@echo "... src/virtualdestructor.i"
+	@echo "... src/virtualdestructor.s"
+	@echo "... src/virtualkeyword.o"
+	@echo "... src/virtualkeyword.i"
+	@echo "... src/virtualkeyword.s"
 .PHONY : help
 
 
