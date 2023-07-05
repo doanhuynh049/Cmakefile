@@ -139,13 +139,58 @@ CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/virtualdestructor.cpp -o CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.s
 
+CMakeFiles/my_executable.dir/src/template.cpp.o: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/src/template.cpp.o: ../src/template.cpp
+CMakeFiles/my_executable.dir/src/template.cpp.o: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/my_executable.dir/src/template.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/src/template.cpp.o -MF CMakeFiles/my_executable.dir/src/template.cpp.o.d -o CMakeFiles/my_executable.dir/src/template.cpp.o -c /home/quat/Cprogram/Cmakefile/src/template.cpp
+
+CMakeFiles/my_executable.dir/src/template.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/src/template.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quat/Cprogram/Cmakefile/src/template.cpp > CMakeFiles/my_executable.dir/src/template.cpp.i
+
+CMakeFiles/my_executable.dir/src/template.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/template.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/template.cpp -o CMakeFiles/my_executable.dir/src/template.cpp.s
+
+CMakeFiles/my_executable.dir/src/constructor.cpp.o: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/src/constructor.cpp.o: ../src/constructor.cpp
+CMakeFiles/my_executable.dir/src/constructor.cpp.o: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/my_executable.dir/src/constructor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/src/constructor.cpp.o -MF CMakeFiles/my_executable.dir/src/constructor.cpp.o.d -o CMakeFiles/my_executable.dir/src/constructor.cpp.o -c /home/quat/Cprogram/Cmakefile/src/constructor.cpp
+
+CMakeFiles/my_executable.dir/src/constructor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/src/constructor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quat/Cprogram/Cmakefile/src/constructor.cpp > CMakeFiles/my_executable.dir/src/constructor.cpp.i
+
+CMakeFiles/my_executable.dir/src/constructor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/constructor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/constructor.cpp -o CMakeFiles/my_executable.dir/src/constructor.cpp.s
+
+CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o: ../src/copyconstructor.cpp
+CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o -MF CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o.d -o CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o -c /home/quat/Cprogram/Cmakefile/src/copyconstructor.cpp
+
+CMakeFiles/my_executable.dir/src/copyconstructor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/src/copyconstructor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quat/Cprogram/Cmakefile/src/copyconstructor.cpp > CMakeFiles/my_executable.dir/src/copyconstructor.cpp.i
+
+CMakeFiles/my_executable.dir/src/copyconstructor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/copyconstructor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/copyconstructor.cpp -o CMakeFiles/my_executable.dir/src/copyconstructor.cpp.s
+
 # Object files for target my_executable
 my_executable_OBJECTS = \
 "CMakeFiles/my_executable.dir/src/main.cpp.o" \
 "CMakeFiles/my_executable.dir/src/dataalginment.cpp.o" \
 "CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o" \
 "CMakeFiles/my_executable.dir/src/shape.cpp.o" \
-"CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o"
+"CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o" \
+"CMakeFiles/my_executable.dir/src/template.cpp.o" \
+"CMakeFiles/my_executable.dir/src/constructor.cpp.o" \
+"CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o"
 
 # External object files for target my_executable
 my_executable_EXTERNAL_OBJECTS =
@@ -155,10 +200,13 @@ bin/my_executable: CMakeFiles/my_executable.dir/src/dataalginment.cpp.o
 bin/my_executable: CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o
 bin/my_executable: CMakeFiles/my_executable.dir/src/shape.cpp.o
 bin/my_executable: CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o
+bin/my_executable: CMakeFiles/my_executable.dir/src/template.cpp.o
+bin/my_executable: CMakeFiles/my_executable.dir/src/constructor.cpp.o
+bin/my_executable: CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o
 bin/my_executable: CMakeFiles/my_executable.dir/build.make
 bin/my_executable: libC_library.a
 bin/my_executable: CMakeFiles/my_executable.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable bin/my_executable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable bin/my_executable"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_executable.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Running my_executable"
 	bin/my_executable

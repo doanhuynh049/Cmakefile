@@ -1,11 +1,18 @@
 // #include <stdio.h>
+
 #include <iostream>
-#include "../include/typedef.h"
+
 #include "../include/dataalignment.h"
-#include "../include/virtualkeyword.h"
 #include "../include/shape.h"
+#include "../include/template.h"
+#include "../include/typedef.h"
 #include "../include/virtualdestructor.h"
-int main(){
+#include "../include/virtualkeyword.h"
+#include "../include/constructor.h"
+#include "../include/copyconstructor.h"
+
+int main()
+{
     // printf("Hello world!");
     // typdefmain();
     // std::cout <<"Hello world"<<std::endl;
@@ -14,6 +21,12 @@ int main(){
     // virtualkeyword();
     // printf("kjsdhfkj");
     // inplementingShape();
-    implementDestructor();
+    // implementDestructor();
+    // myMaxTemplate();
+    // searchTemplateNumber();
+    // searchTemplateString();
+    // executeContainer();
+    // executeContructor();
+    executeCopyConstructor();
     return 0;
 }

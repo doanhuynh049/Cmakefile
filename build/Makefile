@@ -142,6 +142,54 @@ my_executable/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/build
 .PHONY : my_executable/fast
 
+src/constructor.o: src/constructor.cpp.o
+.PHONY : src/constructor.o
+
+# target to build an object file
+src/constructor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/constructor.cpp.o
+.PHONY : src/constructor.cpp.o
+
+src/constructor.i: src/constructor.cpp.i
+.PHONY : src/constructor.i
+
+# target to preprocess a source file
+src/constructor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/constructor.cpp.i
+.PHONY : src/constructor.cpp.i
+
+src/constructor.s: src/constructor.cpp.s
+.PHONY : src/constructor.s
+
+# target to generate assembly for a file
+src/constructor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/constructor.cpp.s
+.PHONY : src/constructor.cpp.s
+
+src/copyconstructor.o: src/copyconstructor.cpp.o
+.PHONY : src/copyconstructor.o
+
+# target to build an object file
+src/copyconstructor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o
+.PHONY : src/copyconstructor.cpp.o
+
+src/copyconstructor.i: src/copyconstructor.cpp.i
+.PHONY : src/copyconstructor.i
+
+# target to preprocess a source file
+src/copyconstructor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/copyconstructor.cpp.i
+.PHONY : src/copyconstructor.cpp.i
+
+src/copyconstructor.s: src/copyconstructor.cpp.s
+.PHONY : src/copyconstructor.s
+
+# target to generate assembly for a file
+src/copyconstructor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/copyconstructor.cpp.s
+.PHONY : src/copyconstructor.cpp.s
+
 src/dataalginment.o: src/dataalginment.cpp.o
 .PHONY : src/dataalginment.o
 
@@ -213,6 +261,30 @@ src/shape.s: src/shape.cpp.s
 src/shape.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/shape.cpp.s
 .PHONY : src/shape.cpp.s
+
+src/template.o: src/template.cpp.o
+.PHONY : src/template.o
+
+# target to build an object file
+src/template.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/template.cpp.o
+.PHONY : src/template.cpp.o
+
+src/template.i: src/template.cpp.i
+.PHONY : src/template.i
+
+# target to preprocess a source file
+src/template.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/template.cpp.i
+.PHONY : src/template.cpp.i
+
+src/template.s: src/template.cpp.s
+.PHONY : src/template.s
+
+# target to generate assembly for a file
+src/template.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/template.cpp.s
+.PHONY : src/template.cpp.s
 
 src/typedef.o: src/typedef.c.o
 .PHONY : src/typedef.o
@@ -296,6 +368,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... C_library"
 	@echo "... my_executable"
+	@echo "... src/constructor.o"
+	@echo "... src/constructor.i"
+	@echo "... src/constructor.s"
+	@echo "... src/copyconstructor.o"
+	@echo "... src/copyconstructor.i"
+	@echo "... src/copyconstructor.s"
 	@echo "... src/dataalginment.o"
 	@echo "... src/dataalginment.i"
 	@echo "... src/dataalginment.s"
@@ -305,6 +383,9 @@ help:
 	@echo "... src/shape.o"
 	@echo "... src/shape.i"
 	@echo "... src/shape.s"
+	@echo "... src/template.o"
+	@echo "... src/template.i"
+	@echo "... src/template.s"
 	@echo "... src/typedef.o"
 	@echo "... src/typedef.i"
 	@echo "... src/typedef.s"

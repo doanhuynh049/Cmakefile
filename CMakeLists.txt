@@ -17,6 +17,9 @@ add_executable(my_executable
     src/virtualkeyword.cpp
     src/shape.cpp
     src/virtualdestructor.cpp
+    src/template.cpp
+    src/constructor.cpp
+    src/copyconstructor.cpp
 )
 
 # add header file to the project
@@ -28,6 +31,9 @@ target_sources(my_executable PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/typedef
 target_sources(my_executable PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/dataalignment.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/virtualkeyword.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/virtualdestructor.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/template.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/constructor.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/copyconstructor.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/shape.h)
 
 # Link against any necessary libraries
