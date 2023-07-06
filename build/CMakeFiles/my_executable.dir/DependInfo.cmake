@@ -8,9 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/quat/Cprogram/Cmakefile/src/accessmodifier.cpp" "CMakeFiles/my_executable.dir/src/accessmodifier.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/accessmodifier.cpp.o.d"
   "/home/quat/Cprogram/Cmakefile/src/constructor.cpp" "CMakeFiles/my_executable.dir/src/constructor.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/constructor.cpp.o.d"
   "/home/quat/Cprogram/Cmakefile/src/copyconstructor.cpp" "CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o.d"
   "/home/quat/Cprogram/Cmakefile/src/dataalginment.cpp" "CMakeFiles/my_executable.dir/src/dataalginment.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/dataalginment.cpp.o.d"
+  "/home/quat/Cprogram/Cmakefile/src/destructor.cpp" "CMakeFiles/my_executable.dir/src/destructor.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/destructor.cpp.o.d"
+  "/home/quat/Cprogram/Cmakefile/src/friendclass.cpp" "CMakeFiles/my_executable.dir/src/friendclass.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/friendclass.cpp.o.d"
   "/home/quat/Cprogram/Cmakefile/src/main.cpp" "CMakeFiles/my_executable.dir/src/main.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/main.cpp.o.d"
   "/home/quat/Cprogram/Cmakefile/src/shape.cpp" "CMakeFiles/my_executable.dir/src/shape.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/shape.cpp.o.d"
   "/home/quat/Cprogram/Cmakefile/src/template.cpp" "CMakeFiles/my_executable.dir/src/template.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/template.cpp.o.d"

@@ -20,6 +20,9 @@ add_executable(my_executable
     src/template.cpp
     src/constructor.cpp
     src/copyconstructor.cpp
+    src/destructor.cpp
+    src/accessmodifier.cpp
+    src/friendclass.cpp
 )
 
 # add header file to the project
@@ -34,6 +37,9 @@ target_sources(my_executable PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/dataali
     ${CMAKE_CURRENT_SOURCE_DIR}/include/template.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/constructor.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/copyconstructor.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/destructor.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/accessmodifier.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/friendclass.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/shape.h)
 
 # Link against any necessary libraries

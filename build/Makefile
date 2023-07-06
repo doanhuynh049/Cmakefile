@@ -142,6 +142,30 @@ my_executable/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/build
 .PHONY : my_executable/fast
 
+src/accessmodifier.o: src/accessmodifier.cpp.o
+.PHONY : src/accessmodifier.o
+
+# target to build an object file
+src/accessmodifier.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/accessmodifier.cpp.o
+.PHONY : src/accessmodifier.cpp.o
+
+src/accessmodifier.i: src/accessmodifier.cpp.i
+.PHONY : src/accessmodifier.i
+
+# target to preprocess a source file
+src/accessmodifier.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/accessmodifier.cpp.i
+.PHONY : src/accessmodifier.cpp.i
+
+src/accessmodifier.s: src/accessmodifier.cpp.s
+.PHONY : src/accessmodifier.s
+
+# target to generate assembly for a file
+src/accessmodifier.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/accessmodifier.cpp.s
+.PHONY : src/accessmodifier.cpp.s
+
 src/constructor.o: src/constructor.cpp.o
 .PHONY : src/constructor.o
 
@@ -213,6 +237,54 @@ src/dataalginment.s: src/dataalginment.cpp.s
 src/dataalginment.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/dataalginment.cpp.s
 .PHONY : src/dataalginment.cpp.s
+
+src/destructor.o: src/destructor.cpp.o
+.PHONY : src/destructor.o
+
+# target to build an object file
+src/destructor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/destructor.cpp.o
+.PHONY : src/destructor.cpp.o
+
+src/destructor.i: src/destructor.cpp.i
+.PHONY : src/destructor.i
+
+# target to preprocess a source file
+src/destructor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/destructor.cpp.i
+.PHONY : src/destructor.cpp.i
+
+src/destructor.s: src/destructor.cpp.s
+.PHONY : src/destructor.s
+
+# target to generate assembly for a file
+src/destructor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/destructor.cpp.s
+.PHONY : src/destructor.cpp.s
+
+src/friendclass.o: src/friendclass.cpp.o
+.PHONY : src/friendclass.o
+
+# target to build an object file
+src/friendclass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/friendclass.cpp.o
+.PHONY : src/friendclass.cpp.o
+
+src/friendclass.i: src/friendclass.cpp.i
+.PHONY : src/friendclass.i
+
+# target to preprocess a source file
+src/friendclass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/friendclass.cpp.i
+.PHONY : src/friendclass.cpp.i
+
+src/friendclass.s: src/friendclass.cpp.s
+.PHONY : src/friendclass.s
+
+# target to generate assembly for a file
+src/friendclass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/friendclass.cpp.s
+.PHONY : src/friendclass.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -368,6 +440,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... C_library"
 	@echo "... my_executable"
+	@echo "... src/accessmodifier.o"
+	@echo "... src/accessmodifier.i"
+	@echo "... src/accessmodifier.s"
 	@echo "... src/constructor.o"
 	@echo "... src/constructor.i"
 	@echo "... src/constructor.s"
@@ -377,6 +452,12 @@ help:
 	@echo "... src/dataalginment.o"
 	@echo "... src/dataalginment.i"
 	@echo "... src/dataalginment.s"
+	@echo "... src/destructor.o"
+	@echo "... src/destructor.i"
+	@echo "... src/destructor.s"
+	@echo "... src/friendclass.o"
+	@echo "... src/friendclass.i"
+	@echo "... src/friendclass.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

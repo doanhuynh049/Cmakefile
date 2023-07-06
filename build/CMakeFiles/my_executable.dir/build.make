@@ -181,6 +181,48 @@ CMakeFiles/my_executable.dir/src/copyconstructor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/copyconstructor.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/copyconstructor.cpp -o CMakeFiles/my_executable.dir/src/copyconstructor.cpp.s
 
+CMakeFiles/my_executable.dir/src/destructor.cpp.o: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/src/destructor.cpp.o: ../src/destructor.cpp
+CMakeFiles/my_executable.dir/src/destructor.cpp.o: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/my_executable.dir/src/destructor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/src/destructor.cpp.o -MF CMakeFiles/my_executable.dir/src/destructor.cpp.o.d -o CMakeFiles/my_executable.dir/src/destructor.cpp.o -c /home/quat/Cprogram/Cmakefile/src/destructor.cpp
+
+CMakeFiles/my_executable.dir/src/destructor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/src/destructor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quat/Cprogram/Cmakefile/src/destructor.cpp > CMakeFiles/my_executable.dir/src/destructor.cpp.i
+
+CMakeFiles/my_executable.dir/src/destructor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/destructor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/destructor.cpp -o CMakeFiles/my_executable.dir/src/destructor.cpp.s
+
+CMakeFiles/my_executable.dir/src/accessmodifier.cpp.o: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/src/accessmodifier.cpp.o: ../src/accessmodifier.cpp
+CMakeFiles/my_executable.dir/src/accessmodifier.cpp.o: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/my_executable.dir/src/accessmodifier.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/src/accessmodifier.cpp.o -MF CMakeFiles/my_executable.dir/src/accessmodifier.cpp.o.d -o CMakeFiles/my_executable.dir/src/accessmodifier.cpp.o -c /home/quat/Cprogram/Cmakefile/src/accessmodifier.cpp
+
+CMakeFiles/my_executable.dir/src/accessmodifier.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/src/accessmodifier.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quat/Cprogram/Cmakefile/src/accessmodifier.cpp > CMakeFiles/my_executable.dir/src/accessmodifier.cpp.i
+
+CMakeFiles/my_executable.dir/src/accessmodifier.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/accessmodifier.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/accessmodifier.cpp -o CMakeFiles/my_executable.dir/src/accessmodifier.cpp.s
+
+CMakeFiles/my_executable.dir/src/friendclass.cpp.o: CMakeFiles/my_executable.dir/flags.make
+CMakeFiles/my_executable.dir/src/friendclass.cpp.o: ../src/friendclass.cpp
+CMakeFiles/my_executable.dir/src/friendclass.cpp.o: CMakeFiles/my_executable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/my_executable.dir/src/friendclass.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_executable.dir/src/friendclass.cpp.o -MF CMakeFiles/my_executable.dir/src/friendclass.cpp.o.d -o CMakeFiles/my_executable.dir/src/friendclass.cpp.o -c /home/quat/Cprogram/Cmakefile/src/friendclass.cpp
+
+CMakeFiles/my_executable.dir/src/friendclass.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_executable.dir/src/friendclass.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quat/Cprogram/Cmakefile/src/friendclass.cpp > CMakeFiles/my_executable.dir/src/friendclass.cpp.i
+
+CMakeFiles/my_executable.dir/src/friendclass.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_executable.dir/src/friendclass.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quat/Cprogram/Cmakefile/src/friendclass.cpp -o CMakeFiles/my_executable.dir/src/friendclass.cpp.s
+
 # Object files for target my_executable
 my_executable_OBJECTS = \
 "CMakeFiles/my_executable.dir/src/main.cpp.o" \
@@ -190,7 +232,10 @@ my_executable_OBJECTS = \
 "CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o" \
 "CMakeFiles/my_executable.dir/src/template.cpp.o" \
 "CMakeFiles/my_executable.dir/src/constructor.cpp.o" \
-"CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o"
+"CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o" \
+"CMakeFiles/my_executable.dir/src/destructor.cpp.o" \
+"CMakeFiles/my_executable.dir/src/accessmodifier.cpp.o" \
+"CMakeFiles/my_executable.dir/src/friendclass.cpp.o"
 
 # External object files for target my_executable
 my_executable_EXTERNAL_OBJECTS =
@@ -203,10 +248,13 @@ bin/my_executable: CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o
 bin/my_executable: CMakeFiles/my_executable.dir/src/template.cpp.o
 bin/my_executable: CMakeFiles/my_executable.dir/src/constructor.cpp.o
 bin/my_executable: CMakeFiles/my_executable.dir/src/copyconstructor.cpp.o
+bin/my_executable: CMakeFiles/my_executable.dir/src/destructor.cpp.o
+bin/my_executable: CMakeFiles/my_executable.dir/src/accessmodifier.cpp.o
+bin/my_executable: CMakeFiles/my_executable.dir/src/friendclass.cpp.o
 bin/my_executable: CMakeFiles/my_executable.dir/build.make
 bin/my_executable: libC_library.a
 bin/my_executable: CMakeFiles/my_executable.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable bin/my_executable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quat/Cprogram/Cmakefile/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable bin/my_executable"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_executable.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Running my_executable"
 	bin/my_executable

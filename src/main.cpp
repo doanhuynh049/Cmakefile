@@ -10,6 +10,9 @@
 #include "../include/virtualkeyword.h"
 #include "../include/constructor.h"
 #include "../include/copyconstructor.h"
+#include "../include/destructor.h"
+#include "../include/accessmodifier.h"
+#include "../include/friendclass.h"
 
 int main()
 {
@@ -27,6 +30,10 @@ int main()
     // searchTemplateString();
     // executeContainer();
     // executeContructor();
-    executeCopyConstructor();
+    // executeCopyConstructor();
+
+    // doDestructor();
+    // executeAcessModifier();
+    executeFriendClass();
     return 0;
 }
