@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/quat/Cprogram/Cmakefile/src/friendclass.cpp" "CMakeFiles/my_executable.dir/src/friendclass.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/friendclass.cpp.o.d"
   "/home/quat/Cprogram/Cmakefile/src/main.cpp" "CMakeFiles/my_executable.dir/src/main.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/main.cpp.o.d"
   "/home/quat/Cprogram/Cmakefile/src/shape.cpp" "CMakeFiles/my_executable.dir/src/shape.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/shape.cpp.o.d"
+  "/home/quat/Cprogram/Cmakefile/src/static.cpp" "CMakeFiles/my_executable.dir/src/static.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/static.cpp.o.d"
   "/home/quat/Cprogram/Cmakefile/src/template.cpp" "CMakeFiles/my_executable.dir/src/template.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/template.cpp.o.d"
   "/home/quat/Cprogram/Cmakefile/src/virtualdestructor.cpp" "CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o.d"
   "/home/quat/Cprogram/Cmakefile/src/virtualkeyword.cpp" "CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o" "gcc" "CMakeFiles/my_executable.dir/src/virtualkeyword.cpp.o.d"

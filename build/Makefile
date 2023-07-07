@@ -334,6 +334,30 @@ src/shape.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/shape.cpp.s
 .PHONY : src/shape.cpp.s
 
+src/static.o: src/static.cpp.o
+.PHONY : src/static.o
+
+# target to build an object file
+src/static.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/static.cpp.o
+.PHONY : src/static.cpp.o
+
+src/static.i: src/static.cpp.i
+.PHONY : src/static.i
+
+# target to preprocess a source file
+src/static.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/static.cpp.i
+.PHONY : src/static.cpp.i
+
+src/static.s: src/static.cpp.s
+.PHONY : src/static.s
+
+# target to generate assembly for a file
+src/static.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_executable.dir/build.make CMakeFiles/my_executable.dir/src/static.cpp.s
+.PHONY : src/static.cpp.s
+
 src/template.o: src/template.cpp.o
 .PHONY : src/template.o
 
@@ -464,6 +488,9 @@ help:
 	@echo "... src/shape.o"
 	@echo "... src/shape.i"
 	@echo "... src/shape.s"
+	@echo "... src/static.o"
+	@echo "... src/static.i"
+	@echo "... src/static.s"
 	@echo "... src/template.o"
 	@echo "... src/template.i"
 	@echo "... src/template.s"

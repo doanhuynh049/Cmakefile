@@ -23,6 +23,7 @@ add_executable(my_executable
     src/destructor.cpp
     src/accessmodifier.cpp
     src/friendclass.cpp
+    src/static.cpp
 )
 
 # add header file to the project
@@ -40,6 +41,7 @@ target_sources(my_executable PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/dataali
     ${CMAKE_CURRENT_SOURCE_DIR}/include/destructor.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/accessmodifier.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/friendclass.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/static.h
     ${CMAKE_CURRENT_SOURCE_DIR}/include/shape.h)
 
 # Link against any necessary libraries

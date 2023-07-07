@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_executable.dir/src/main.cpp.o.d"
   "CMakeFiles/my_executable.dir/src/shape.cpp.o"
   "CMakeFiles/my_executable.dir/src/shape.cpp.o.d"
+  "CMakeFiles/my_executable.dir/src/static.cpp.o"
+  "CMakeFiles/my_executable.dir/src/static.cpp.o.d"
   "CMakeFiles/my_executable.dir/src/template.cpp.o"
   "CMakeFiles/my_executable.dir/src/template.cpp.o.d"
   "CMakeFiles/my_executable.dir/src/virtualdestructor.cpp.o"

@@ -13,6 +13,7 @@
 #include "../include/destructor.h"
 #include "../include/accessmodifier.h"
 #include "../include/friendclass.h"
+#include "../include/static.h"
 
 int main()
 {
@@ -34,6 +35,7 @@ int main()
 
     // doDestructor();
     // executeAcessModifier();
-    executeFriendClass();
+    // executeFriendClass();
+    // implementStatic();
     return 0;
 }

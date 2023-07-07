@@ -31,5 +31,10 @@ void executeFriendClass()
     int *ptr = reinterpret_cast<int *>(&obj);
     *ptr = 10;
     std::cout << obj.getData() << std::endl;
-    delete ptr;
+    // delete ptr;
+    float *floatptr = reinterpret_cast<float *>(&obj);
+    *floatptr = 12.32;
+    // *ptr = 10.12;
+    std::cout << *floatptr << std::endl;
+    // std::cout << obj.getData() << std::endl;
 }
