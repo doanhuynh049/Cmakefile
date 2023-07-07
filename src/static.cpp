@@ -15,12 +15,11 @@ int factorial(int n)
 }
 void implementStatic()
 {
-    StaticClass obj1;
-    StaticClass obj2;
-    StaticClass obj3;
-
-    // obj1.var = 10;
-    std::cout << obj1.count << std::endl;
-    std::cout << obj2.count << std::endl;
-    std::cout << obj3.count << std::endl;
+    // int x = 0;
+    // if (x == 0)
+    // {
+    //     static StaticClass obj1;
+    // }
+    // std::cout << "End of main" << std::endl;
+    StaticClass::print();
 }

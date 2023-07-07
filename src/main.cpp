@@ -36,6 +36,6 @@ int main()
     // doDestructor();
     // executeAcessModifier();
     // executeFriendClass();
-    // implementStatic();
+    implementStatic();
     return 0;
 }

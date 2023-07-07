@@ -15,6 +15,11 @@ class StaticClass
     {
         std::cout << "Destructing object with id " << id << std::endl;
     }
+    static void print()
+    {
+        // id = 10;
+        std::cout << "This is static member function" << std::endl;
+    }
 };
 void implementStatic();
 #endif
